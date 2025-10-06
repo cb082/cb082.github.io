@@ -1,0 +1,273 @@
+<html>
+
+<head>
+	<title>T. Schmid</title>
+	
+	<meta charset="UTF-8">
+	<meta name="description" content="Todd Schmid's personal webspace.">
+	<meta name="keywords" content="mathematics,post-graduate,logic,todd,schmid,pplv,london">
+	<meta name="author" content="Todd Schmid">
+	
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="stylesheet" href="styles.css" />
+	<link rel="icon" href="squidab.png" />
+</head>
+
+<body>
+	<div id="content">
+		<div id="head">
+			<div id="name">Todd Schmid</div>
+			<div id="links">
+				<a href="index.html"><span class="link">Personal</span></a>
+				<a href="math.html"><span class="link">Research</span></a>
+				<a href="cv.html"><span class="link">CV</span></a>
+				<a href="teaching.html"><span class="link">Teaching</span></a>
+			</div>
+		</div>
+
+		<div id="stuff">
+			<h1> Contact Information</h1>
+			<p>
+			<ul> 
+				<li>Email: <i>t.schmid[at]bucknell.edu</i></li>
+				<li>Office: <i>Room 372 of Breakiron</i></li>
+			</ul>
+			</p>
+
+			If you would like me to write you a recommendation letter, please <a href="letters.html" target="_blank">click here</a>.
+
+			<h1>About</h1>
+			<p>
+				I am an Assistant Professor in the <a href="https://www.bucknell.edu/academics/college-engineering/majors-departments/computer-science" target="_blank">Computer Science Department of Bucknell University</a>.
+				I am passionate about inclusive STEM education, the mathematical foundations of computer science, and youth outreach. 
+				I used to be an Assistant Professor in the <a href="https://www.stmarys-ca.edu/academics/science/math-computer-science" target="_blank">Mathematics and Computer Science Department of St. Mary's College of California</a>.
+			</p>
+			<p>
+				I completed my PhD in 2023 as a part of the <a href="http://pplv.cs.ucl.ac.uk/welcome/" target="_blank">PPLV group</a> in the <a href="https://www.ucl.ac.uk/computer-science/" target="_blank">Computer Science Department of University College London</a>. 
+				My supervisers were the superstars <a href="https://www.alexandrasilva.org/#/main.html" target="_blank">Alexandra Silva</a> and <a href="http://jurriaan.me/" target="_blank">Jurriaan Rot</a>.
+				My PhD thesis is titled <a href="thesis.pdf" target="_blank"><i>Coalgebraic Completeness Theorems for Effectful Process Algebras</i></a>, and offers a general framework for axiomatizing process algebras that consist of action sequencing operators, an algebraic effect, and recursion.
+				One of the main contributions of the framework, I would say, is how it handles unguarded recursive specifications.
+				The work generalizes the completeness theorem for Guarded Kleene Algebra with Tests, or <i>GKAT</i>, from <a href = "https://arxiv.org/abs/1907.05920" target="_blank">(Smolka et al, 2019)</a>.
+				Effectful process algebras are closely connected but orthogonal to the calculi studied in <a href="https://alexandrasilva.org/files/thesis.pdf" target="_blank">Alexandra's PhD thesis</a>.
+			</p>
+			
+			<p>
+				<b>Interests</b><br />
+				I am generally interested in universal algebra and coalgebra, iteration theory, and process algebra, but on occasion I am willing to admit to my obession with generative systems of the form \(X \to MFX\), where \(M\) is a monad of some kind and \(F\) is some polynomial functor.
+				I spend a lot of time thinking about monad presentations and final coalgebras.
+				Recently, I have been working with behavioural differential equations, algebraic approaches to trace semantics, and lattices.
+				I used to work with fractals and generative music.
+				I still do, but I used to too.
+			</p>
+			<p>
+				If we happen share interests, please write! 
+				I'm always happy to make a new pen pal. 
+			</p>
+
+			<p>Below is a picture of a very much passed out Mabel.</p>
+			<div class="image"><img src="images/mabel.jpg" alt="A cute dog passed out." /></div>
+
+			<!--<p>Below is a picture of me in a Frodo costume at 11 years old.</p>
+
+			<div class="image"><img src="halloween.jpg" /></div>
+			-->
+
+			<p>
+				Outside of theoretical computer science, I <a href="https://toddtoddtodd.bandcamp.com/" target="_blank">make electronic music</a>, think about rescue dogs, and climb.
+			</p>
+
+			<h1>News</h1>
+			<table class="timeline">
+				<tr><td class="date">12/2024</td>
+					<td>
+						The paper I wrote with <a href="https://tobias.kap.pe/" target="_blank">Tobias Kapp&eacute;</a> in the fall, <i>A General Completeness Theorem for Skip-free Star Algebras</i> was <a href="https://etaps.org/2025/conferences/fossacs/" target="_blank">accepted at FoSSaCS 2025</a>. <a href="https://arxiv.org/abs/2501.15325" target="_blank">Click for the full version of the paper.</a>
+					</td>
+				</tr>
+
+				<tr><td class="date">10/2024</td>
+					<td>
+						The paper I wrote with Corina Cirstea, Lawrence Moss, Victoria Noquez, Alexandra Silva and Ana Sokolova this summer, <a target="_blank" href="https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.CSL.2025.30"><i>A Complete Inference System for Probabilistic Infinite Trace Equivalence</i></a>, was <a href="" target="_blank">accepted at CSL 2025</a>. See you in Amsterdam!
+					</td>
+				</tr>
+
+				<tr><td class="date">10/2024</td>
+					<td>
+						In September of last year, <a href="https://tobias.kap.pe/" target="_blank">Tobias Kappé</a> found a hole in <a href="https://link.springer.com/chapter/10.1007/978-3-031-30044-8_12" target="_blank">the completeness proof for skip-free GKAT that we published at ESOP 2023</a> along with <a href="https://alexandrasilva.org/#/main.html" target="_blank">Alexandra Silva</a>.
+						Thankfully, we had another completeness proof (using a different technique) in our pocket, so we knew that the result was still correct, at least. 
+						But we wanted to fix the proof technique we used <i>in that paper</i>, so we went to work.
+						Soon after, we produced the completeness proof that appeared in <a href="https://discovery.ucl.ac.uk/id/eprint/10185006/" target="_blank">my thesis</a>.
+						We just put a new and improved, polished and presentable version of the paper <a href="https://arxiv.org/abs/2301.11301" target="_blank">on arXiv</a>.
+						The proof ended up being much harder (and even more interesting) than we thought. 
+					</td>
+				</tr>
+
+				<tr><td class="date">07/2024</td>
+					<td>
+						Along with 
+							<a href="https://www.southampton.ac.uk/people/5wyrzl/doctor-corina-cirstea" target="_blank">Corina Cirstea</a>,
+							<a href="https://iulg.sitehost.iu.edu/moss" target="_blank">Larry Moss</a>,
+							<a href="https://www.stmarys-ca.edu/faculty-directory/noquez-victoria-tori" target="_blank">Tori Noquez</a>,
+							<a href="https://alexandrasilva.org/#/main.html" target="_blank">Alexandra Silva</a>, and
+							<a href="https://www.cs.uni-salzburg.at/~anas/" target="_blank">Ana Sokolova</a>,
+						I took part in the Summer Research in Mathematics program at SLMath (formerly MSRI) in Berkeley. 
+						We are very happy that we did, in fact, prove our theorem (more news to come, hopefully).
+					</td>
+				</tr>
+
+				<tr><td class="date">07/2024</td>
+					<td>
+						As of today, I am an Assistant Professor in the Computer Science Department at <a href="https://www.bucknell.edu/" target="_blank">Bucknell University</a>!
+					</td>
+				</tr>
+
+				<tr><td class="date">05/2024</td>
+					<td>
+						I gave a talk about <i>star fragments</i> in the <a href="https://events.illc.uva.nl/llama/" target="_blank">LLAMA Seminar</a> at the <a href="https://www.illc.uva.nl/" target="_blank">ILLC</a>.
+						<!--had a lovely and productive time thinking about various program logics with <a href="http://www.jurriaan.mecreativecode.org" target="_blank">Jurrian Rot</a> and <a href="https://tobias.kap.pe/" target="_blank">Kapp&eacute;</a> in the Netherlands. -->
+					</td>
+				</tr>
+
+				<tr><td class="date">01/2024</td>
+					<td>
+						My thesis corrections were finally approved and my thesis is now somewhere in the UCL database! 
+						If you find it, please let me know, because I haven't been able to. I put a copy of it <a href="thesis.pdf" target="_blank">here</a> instead. 
+					</td>
+				</tr>
+				
+				<tr><td class="date">10/2023</td>
+					<td>
+						I was invited to give a talk at the <a href="https://bstn.cc/" target="_blank">Boston Computation Club</a>!
+						It was a tutorial on coequations based on <a href="https://arxiv.org/abs/2109.11967" target="_blank">my paper with Fred Dahlqvist</a>. 
+					</td>
+				</tr>
+
+				<tr><td class="date">09/2023</td>
+					<td>
+						I gave a talk on transition systems, generative music, and fractals at the <i>Saint Mary's College of California Math Colloquium</i>.
+					</td>
+				</tr>
+				
+				
+				<tr><td class="date">07/2023</td>
+					<td>
+						As of today, I am an Assistant Professor in the Mathematics and Computer Science Department at St Mary's College!
+					</td>
+				</tr>
+
+				<tr><td class="date">06/2023</td>
+					<td>
+						At CALCO, <a href="https://www.torinoquez.com/" target="_blank">Victoria Noquez</a> presented our framework for interpreting certain process terms as recipes for fractal sets. 
+						Based on the paper <i>Fractals from Regular Behaviours</i>, authored by myself, <a href="https://www.torinoquez.com/" target="_blank">Victoria Noquez</a>, and <a href="https://math.indiana.edu/about/faculty/moss-larry.html" target="_blank">Larry Moss</a>.
+						Actually, we won Best Paper at CALCO!
+					</td>
+				</tr>
+
+				<tr><td class="date">06/2023</td>
+					<td>
+						My PhD viva took place. 
+						I passed!
+					</td>
+				</tr>
+				
+				<tr><td class="date">04/2023</td>
+					<td>
+						I presented a completeness theorem for Skip-free Guarded Kleene Algebra with Tests at ESOP, based on the paper by <a href="https://tobias.kap.pe/" target="_blank">Tobias Kappé</a>, myself, and <a target="_blank" href="http://www.alexandrasilva.org">Alexandra Silva</a>. 
+					</td>
+				</tr>
+
+				<tr><td class="date">04/2023</td>
+					<td>
+						Taught a class on <a target="_blank" href="https://sonic-pi.net/">Sonic Pi</a> as part of the youth outreach event <a target="_blank" href="https://www.eyh.cornell.edu/">Expanding Your Horizons</a>. 
+					</td>
+				</tr>
+				
+				<tr><td class="date">02/2023</td>
+					<td>
+						I was an invited speaker in the <a href="https://pl.cs.cornell.edu/pldg/2023sp/" target="_blank">Cornell University Programming Languages Discussion Group (PLDG)</a>. 
+					</td>
+				</tr>
+				
+				<tr><td class="date">11/2022</td>
+					<td>I was an invited speaker in the <a href="https://www.bu.edu/cs/research/popv/seminar/" target="_blank">Boston University POPV seminar</a>. While I was there, I got to talk shop with <a href="https://cs-people.bu.edu/czhang03/" target="_blank">Cheng Zhang</a> and <a href="" target="_blank">Arthur Azevedo de Amorim</a> about commutative Kleene algebra (wow that stuff is hard).</td>
+				</tr>
+				
+				<tr><td class="date">11/2022</td>
+					<td>
+						I visited <a href="https://math.indiana.edu/about/faculty/moss-larry.html" target="_blank">Larry Moss</a> and <a href="https://www.torinoquez.com/" target="_blank">Victoria Noquez</a> at Indiana University Bloomington. 
+						I was also an invited speaker in the IU Bloomington Logic Seminar, where I talked about my recipes for process calculi.</td>
+				</tr>
+				
+				<tr><td class="date">08/2022</td>
+					<td>Research visit from <a href="https://tobias.kap.pe/" target="_blank">Tobias Kappé</a>. Took an honest crack at proving completeness of GKAT, and we got as far as completeness for <i>skip-free</i> GKAT!</td>
+				</tr>
+
+				<tr><td class="date">08/2022</td>
+					<td>
+						Had a blast presenting some monads on <b>Pos</b> at <a href="https://math.chapman.edu/blast2022/" target="_blank">BLAST 2022</a>.
+					</td>
+				</tr>
+				
+				<tr><td class="date">07/2022</td>
+					<td>
+						Presented the <i>processes parametrised by</i> framework at <a href="https://icalp2022.irif.fr/" target="_blank">ICALP 2022</a>.
+					</td>
+				</tr>
+
+				<tr><td class="date">05/2022</td>
+					<td>Research visit from <a href="wrozowski.github.io" target="_blank">Wojtek Rozowski</a>.</td>
+				</tr>
+				
+				<tr><td class="date">04/2022</td>
+					<td>Research visit from <a href="https://dblp.org/pid/228/4486.html" target="_blank">Jana Wagemaker</a>. Started thinking about how to add hypotheses to GKAT.</td>
+				</tr>
+				
+				<tr><td class="date">04/2022</td>
+					<td>Internship at Cornell University begins.</td>
+				</tr>
+
+				<tr><td class="date">02/2022</td>
+					<td>
+						Day trip to Rice University, in Houston, Texas, to visit <a href="https://mamouras.web.rice.edu/" target="_blank">Konstaninos Mamouras</a>. Ate authentic Texas BBQ and gave a lecture on the free algebra construction. 
+					</td>
+				</tr>
+
+				<tr><td class="date">02/2022</td>
+					<td>
+						Appointment at Radboud University ended. Unofficially borrowed an office at LSU, in Baton Rouge, Louisiana.
+					</td>
+				</tr>
+
+				<tr><td class="date">09/2021</td>
+					<td>
+						Became a guest researcher in the <a href="https://www.sws.cs.ru.nl/" target="_blank">Software Sciences group at Radboud University</a>, in Nijmegen, the Netherlands.
+					</td>
+				</tr>
+
+				<tr><td class="date">08/2021</td>
+					<td>
+						Presented at <a href="https://www.coalg.org/calco-mfps2021/mfps/" target="_blank">MFPS 2021</a> and then promptly slept in for Fred Dahlqvist's presentation of our Pearl submission at <a href="http://easyconferences.eu/icalp2021/calco/" target="_blank">CALCO 2021</a> (In my defense, it was very early in the morning because I was on the other side of the world!).
+					</td>
+				</tr>
+
+				<tr><td class="date">07/2021</td>
+					<td>
+						Presented at <a href="http://easyconferences.eu/icalp2021/" target="_blank">ICALP 2021</a>.
+					</td>
+				</tr>
+
+				<tr><td class="date">09/2019</td>
+					<td>
+						Started my PhD studies with the <a href="http://pplv.cs.ucl.ac.uk/welcome/" target="_blank">PPLV group at UCL</a>, in London, UK.
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</body>
+
+
+</html>
