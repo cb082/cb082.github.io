@@ -1,4 +1,4 @@
-The Theory Course Page Formatting Guide
+vThe Theory Course Page Formatting Guide
 ===
 
 This is a quick guide to writing your own course pages in the style as the ones you find here. Each course is in its own folder, which you should give an alphanumeric name. For eg., the Theory of Computation course pages are in the folder `csci341/`. A course folder in this format consists of the  subfolders `assignments/`, `compiled/`, `imgs/`, and `pageconstruction/`, and two html files, `footer.html` and `header.html`. These last two html files should be customized for each course. Knowing the purpose each of the folders has is crucial for understanding how the automated generation of pages works in this format (later).
