@@ -1,0 +1,294 @@
+<!-- THIS IS A COMPILED FILE 
+ Compiled on 2025-10-22 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+
+<head>
+	
+	<meta charset="UTF-8">
+	<meta name="author" content="Todd Schmid">
+	
+	<!-- Renders latex formulas -->
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+	<!-- Renders tikz figures mid page -->
+    <link rel="stylesheet" type="text/css" href="https://tikzjax.com/v1/fonts.css">
+    <script src="https://tikzjax.com/v1/tikzjax.js"></script>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="stylesheet" href="../../../styles.css" />
+	<link rel="stylesheet" href="../../course_styles.css" />
+	<link rel="icon" href="../../../squidab.png" />
+	
+	<!-- * Customize for each course * -->
+	<title>CSCI 341 Theory of Computation</title>
+	<meta name="description" content="Course pages for CSCI 341.">
+	<meta name="keywords" content="bucknell,theory,computer,science,schmid,csci341">
+	<!-- ***************************** -->
+</head>
+
+<body>
+
+<div id="content">
+
+<!-- Header Section -->
+<div id="course_head" style="text-align: left;">
+	<h1 style="margin-bottom: 0; text-align: left;">CSCI 341 Theory of Computation</h1>
+	<i>Fall 2025, with <a href="../../../teaching.html">Schmid</a></i>
+	<div id="links">
+		<!-- * Customize for each course * -->
+		<a href="csci341_index.html"><span class="link">Syllabus</span></a>
+		<a href="csci341_contents.html"><span class="link">Notes</span></a>
+		<a href="csci341_resources.html"><span class="link">Resources</span></a>
+		<a href= "csci341_assignments.html"><span class="link">Assignments</span></a>
+		<!-- ***************************** -->
+	</div>
+</div>
+
+
+
+<div id="stuff">
+
+
+<!-- BEGINNING OF BODY -->
+<div style="border: none; margin-bottom: -25px; padding: 0px; text-align: right;"><a href="../compiled/csci341_notes_3_01_intro_laplace_transforms.html"><span class="link"> &larr; intro laplace transforms</span></a><a href="../compiled/csci341_notes_3_03_fourier_series_visualization.html"><span class="link">fourier series visualization &rarr;</span></a></div><h1>Module: Fourier Series (Sines and Cosines)</h1>
+
+  <h2>Learning Objectives</h2>
+  <ul>
+    <li>Define the Fourier series representation of a periodic function.</li>
+    <li>Compute Fourier coefficients using sine and cosine terms.</li>
+    <li>Use symmetry (even/odd) to simplify calculations.</li>
+    <li>Construct half-range expansions for functions defined on \([0, L]\).</li>
+    <li>Understand convergence properties and the Gibbs phenomenon.</li>
+  </ul>
+
+  <h2>1. Theory and Formulas</h2>
+  <p>
+    Suppose \(f(x)\) is a function of period \(2L\). Its Fourier series expansion is
+  </p>
+  <p>
+    \[
+    f(x) \sim \frac{a_0}{2} + \sum_{n=1}^{\infty}
+    \left( a_n \cos\!\left(\frac{n\pi x}{L}\right) + b_n \sin\!\left(\frac{n\pi x}{L}\right) \right),
+    \]
+  </p>
+  <p>with coefficients</p>
+  <p>
+    \[
+    a_n = \frac{1}{L}\int_{-L}^{L} f(x)\cos\!\left(\frac{n\pi x}{L}\right)\,dx, \quad
+    b_n = \frac{1}{L}\int_{-L}^{L} f(x)\sin\!\left(\frac{n\pi x}{L}\right)\,dx.
+    \]
+  </p>
+  <p>and</p>
+  <p>
+    \[
+    a_0 = \frac{1}{L}\int_{-L}^{L} f(x)\,dx.
+    \]
+  </p>
+
+  <h3>Even/Odd Simplifications</h3>
+  <ul>
+    <li>If \(f\) is even, all \(b_n = 0\) and we use only cosines:
+      \[
+      a_n = \frac{2}{L}\int_0^L f(x)\cos\!\left(\frac{n\pi x}{L}\right)\,dx.
+      \]
+    </li>
+    <li>If \(f\) is odd, all \(a_n = 0\) and we use only sines:
+      \[
+      b_n = \frac{2}{L}\int_0^L f(x)\sin\!\left(\frac{n\pi x}{L}\right)\,dx.
+      \]
+    </li>
+  </ul>
+
+  <h3>Half-Range Expansions</h3>
+  <p>
+    If \(f\) is defined only on \([0, L]\):
+  </p>
+  <ul>
+    <li><strong>Even extension:</strong> Use cosine series only.</li>
+    <li><strong>Odd extension:</strong> Use sine series only.</li>
+  </ul>
+
+  <h2>2. Examples</h2>
+
+  <h3>Example 1: \(f(x) = x\) on \([-L, L]\)</h3>
+  <p>Since \(f(x)\) is odd, only sine terms appear:</p>
+  <p>
+    \[
+    b_n = \frac{2}{L}\int_0^L x \sin\!\left(\frac{n\pi x}{L}\right)\,dx.
+    \]
+  </p>
+  <details><summary>Solution Steps</summary>
+    Integrate by parts:  
+    \[
+    b_n = \frac{2}{L}\left[-\frac{Lx}{n\pi}\cos\!\left(\frac{n\pi x}{L}\right)
+    \Big|_0^L + \frac{L}{n\pi}\int_0^L \cos\!\left(\frac{n\pi x}{L}\right)dx\right].
+    \]
+    Simplify and use \(\cos(n\pi) = (-1)^n\).  
+    Final result:
+    \[
+    b_n = \frac{2L}{n\pi}(-1)^{n+1}.
+    \]
+  </details>
+
+  <h3>Example 2: \(f(x) = x^2\) on \([0, L]\) (even extension)</h3>
+  <p>
+    \[
+    a_n = \frac{2}{L}\int_0^L x^2\cos\!\left(\frac{n\pi x}{L}\right)\,dx.
+    \]
+  </p>
+  <details><summary>Hint</summary>
+    Use integration by parts twice. Remember that \(\int x^2\cos(kx)\,dx\) yields terms involving \(\sin(kx)\) and \(\cos(kx)\).
+  </details>
+
+  <h2>3. Practice Problems</h2>
+  <ol>
+    <li>Compute the Fourier series of \(f(x) = x\) on \([- \pi, \pi]\).</li>
+    <li>Compute the Fourier series of \(f(x) = x^2\) on \([- \pi, \pi]\).</li>
+    <li>
+      Let \(f(x) = \begin{cases}0, & -\pi < x < 0 \\ 1, & 0 \le x < \pi \end{cases}\).  
+      Find its Fourier series.
+    </li>
+    <li>
+      For \(f(x)=x\) on \([0, \pi]\):  
+      (a) Find the cosine series (even extension).  
+      (b) Find the sine series (odd extension).
+    </li>
+    <li>
+      Use the Fourier series for \(f(x)=x^2\) on \([- \pi, \pi]\) to show that  
+      \[
+      \sum_{n=1}^\infty \frac{1}{n^2} = \frac{\pi^2}{6}.
+      \]
+    </li>
+  </ol>
+
+  <h2>4. Convergence & Remarks</h2>
+  <ul>
+    <li>For piecewise-smooth \(f\), the Fourier series converges to \(f(x)\) at points of continuity, and to the midpoint of jumps at discontinuities.</li>
+    <li>Near discontinuities, the series exhibits Gibbs phenomenon (overshoot ≈ 9%).</li>
+    <li>Even/odd symmetry drastically simplifies computation.</li>
+  </ul>
+
+  <h2>5. Video Resources</h2>
+  <p>Recommended viewing to accompany this module:</p>
+
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/wmCIrpLBFds" allowfullscreen></iframe>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/ijQaTAT3kOg" allowfullscreen></iframe>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/UKHBWzoOKsY" allowfullscreen></iframe>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/r6sGWTCMz2k" allowfullscreen></iframe>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/Uwzl3NLjG00" allowfullscreen></iframe>
+
+
+<div style="border: none; margin-bottom: -25px; padding: 0px; text-align: right;"><a href="../compiled/csci341_notes_3_01_intro_laplace_transforms.html"><span class="link"> &larr; intro laplace transforms</span></a><a href="../compiled/csci341_notes_3_03_fourier_series_visualization.html"><span class="link">fourier series visualization &rarr;</span></a></div>
+
+
+<!-- END OF BODY -->
+    <div style="height: 50px;border-top: 1px solid rgb(131, 131, 131);margin-top: 50px; padding: 20px; text-align: right;">
+        <a href=""><span class="link">Top</span></a>
+    </div>
+</div>
+</div>
+</body>
+
+
+</html>

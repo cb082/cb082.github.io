@@ -1,0 +1,270 @@
+<!-- THIS IS A COMPILED FILE 
+ Compiled on 2025-10-22 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+
+<head>
+	
+	<meta charset="UTF-8">
+	<meta name="author" content="Todd Schmid">
+	
+	<!-- Renders latex formulas -->
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+	<!-- Renders tikz figures mid page -->
+    <link rel="stylesheet" type="text/css" href="https://tikzjax.com/v1/fonts.css">
+    <script src="https://tikzjax.com/v1/tikzjax.js"></script>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="stylesheet" href="../../../styles.css" />
+	<link rel="stylesheet" href="../../course_styles.css" />
+	<link rel="icon" href="../../../squidab.png" />
+	
+	<!-- * Customize for each course * -->
+	<title>CSCI 341 Theory of Computation</title>
+	<meta name="description" content="Course pages for CSCI 341.">
+	<meta name="keywords" content="bucknell,theory,computer,science,schmid,csci341">
+	<!-- ***************************** -->
+</head>
+
+<body>
+
+<div id="content">
+
+<!-- Header Section -->
+<div id="course_head" style="text-align: left;">
+	<h1 style="margin-bottom: 0; text-align: left;">CSCI 341 Theory of Computation</h1>
+	<i>Fall 2025, with <a href="../../../teaching.html">Schmid</a></i>
+	<div id="links">
+		<!-- * Customize for each course * -->
+		<a href="csci341_index.html"><span class="link">Syllabus</span></a>
+		<a href="csci341_contents.html"><span class="link">Notes</span></a>
+		<a href="csci341_resources.html"><span class="link">Resources</span></a>
+		<a href= "csci341_assignments.html"><span class="link">Assignments</span></a>
+		<!-- ***************************** -->
+	</div>
+</div>
+
+
+
+<div id="stuff">
+
+
+<!-- BEGINNING OF BODY -->
+<div style="border: none; margin-bottom: -25px; padding: 0px; text-align: right;"><a href="../compiled/csci341_notes_3_02_fourier_series.html"><span class="link"> &larr; fourier series</span></a></div><h1>Interactive Fourier Series Visualization Module</h1>
+
+<p class="note">
+This page embeds <strong>SageMathCell</strong> to compute Fourier coefficients and plot the partial sums.
+After the page loads, click the blue button in each section (<em>Run Fourier Visualization</em>), then adjust
+the slider for \(N\) to see the Fourier approximation converge.
+</p>
+
+<p>
+We visualize Fourier series on \([-L, L]\) (default \(L=\pi\)):
+\[
+f(x) \sim \frac{a_0}{2} + \sum_{n=1}^{\infty}
+\left( a_n \cos\!\left(\frac{n\pi x}{L}\right) + b_n \sin\!\left(\frac{n\pi x}{L}\right) \right),
+\]
+with
+\[
+a_n = \frac{1}{L}\!\int_{-L}^{L} f(x)\cos\!\left(\frac{n\pi x}{L}\right)\,dx,\quad
+b_n = \frac{1}{L}\!\int_{-L}^{L} f(x)\sin\!\left(\frac{n\pi x}{L}\right)\,dx.
+\]
+</p>
+
+<h2>1) Odd Function: \( f(x) = x \)</h2>
+<section id="odd">
+  <p>For this odd function, the Fourier series has only <em>sine</em> terms.</p>
+  <div class="sagecell">
+    <textarea>
+var('x, n')
+f(x) = x
+L = pi
+
+a0 = (1/L)*integral(f(x), (x, -L, L))
+an(n) = (1/L)*integral(f(x)*cos(n*pi*x/L), (x, -L, L))
+bn(n) = (1/L)*integral(f(x)*sin(n*pi*x/L), (x, -L, L))
+
+def S_N(x, N):
+    return a0/2 + sum(an(k)*cos(k*pi*x/L) + bn(k)*sin(k*pi*x/L) for k in range(1, N+1))
+
+@interact
+def _(N=(1, 30)):
+    show(plot(f(x), (x, -L, L), color='black', thickness=3, legend_label='f(x)')
+         + plot(S_N(x, N), (x, -L, L), color='red', legend_label=f'N={N}'),
+         ymin=-4, ymax=4, figsize=5)
+    </textarea>
+  </div>
+</section>
+
+<h2>2) Even Function: \( f(x) = |x| \)</h2>
+<section id="even">
+  <p>For this even function, the Fourier series has only <em>cosine</em> terms.</p>
+  <div class="sagecell">
+    <textarea>
+var('x, n')
+f(x) = abs(x)
+L = pi
+
+a0 = (1/L)*integral(f(x), (x, -L, L))
+an(n) = (1/L)*integral(f(x)*cos(n*pi*x/L), (x, -L, L))
+bn(n) = (1/L)*integral(f(x)*sin(n*pi*x/L), (x, -L, L))
+
+def S_N(x, N):
+    return a0/2 + sum(an(k)*cos(k*pi*x/L) + bn(k)*sin(k*pi*x/L) for k in range(1, N+1))
+
+@interact
+def _(N=(1, 30)):
+    show(plot(f(x), (x, -L, L), color='black', thickness=3, legend_label='f(x)')
+         + plot(S_N(x, N), (x, -L, L), color='blue', legend_label=f'N={N}'),
+         ymin=-1, ymax=4, figsize=5)
+    </textarea>
+  </div>
+</section>
+
+<h2>3) Custom Function</h2>
+<section id="custom">
+  <p>Enter any function of <code>x</code> (e.g., <code>sin(x)</code>, <code>x^2</code>, <code>abs(x)</code>, or a <code>piecewise</code> definition).</p>
+  <div class="sagecell">
+    <textarea>
+var('x, n')
+# Enter your function below:
+f(x) = x^2   # Change this line to define your own function
+L = pi
+
+a0 = (1/L)*integral(f(x), (x, -L, L))
+an(n) = (1/L)*integral(f(x)*cos(n*pi*x/L), (x, -L, L))
+bn(n) = (1/L)*integral(f(x)*sin(n*pi*x/L), (x, -L, L))
+
+def S_N(x, N):
+    return a0/2 + sum(an(k)*cos(k*pi*x/L) + bn(k)*sin(k*pi*x/L) for k in range(1, N+1))
+
+@interact
+def _(N=(1, 30)):
+    show(plot(f(x), (x, -L, L), color='black', thickness=3, legend_label='f(x)')
+         + plot(S_N(x, N), (x, -L, L), color='green', legend_label=f'N={N}'),
+         ymin=-4, ymax=4, figsize=5)
+    </textarea>
+  </div>
+</section>
+
+<script>
+  // Initialize all Sage cells on the page
+  sagecell.makeSagecell({
+    inputLocation: '.sagecell',
+    evalButtonText: 'Run Fourier Visualization',
+    linked: false
+  });
+</script><div style="border: none; margin-bottom: -25px; padding: 0px; text-align: right;"><a href="../compiled/csci341_notes_3_02_fourier_series.html"><span class="link"> &larr; fourier series</span></a></div>
+
+
+<!-- END OF BODY -->
+    <div style="height: 50px;border-top: 1px solid rgb(131, 131, 131);margin-top: 50px; padding: 20px; text-align: right;">
+        <a href=""><span class="link">Top</span></a>
+    </div>
+</div>
+</div>
+</body>
+
+
+</html>
