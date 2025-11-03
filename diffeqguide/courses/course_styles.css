@@ -1,5 +1,5 @@
 #course_head{
-	vertical-align: bottom;
+	/*vertical-align: bottom;*/
 	display: block;
 	max-width: 98%;
 	min-width: 150px;
@@ -385,10 +385,6 @@ td {
 	/* border: 1px solid blue; */
 	background-color:rgba(178, 146, 185, 0.05);
 	border-bottom: 2px double rgba(199, 128, 254, 0.554) ;
-}
-
-.proof:hover{
-	/* height: fit-content; */
 }
 
 .proof::before {
