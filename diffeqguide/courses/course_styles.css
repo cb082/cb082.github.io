@@ -251,13 +251,61 @@ img {
 	margin-right: auto;
 	width: 90%;
 	padding:2%;
-	/* border: 1px solid blue; */
+	border: 1.25px solid black; 
 	background-color:rgba(217.6, 256, 192, 1) ;
 }
 
 .definition::before {
 	color: rgb(0, 46, 107);
 	content: "Definition. ";
+	font-weight: bold;
+}
+
+.example {
+	margin:10px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 90%;
+	padding:2%;
+	border: 2px solid black; 
+	background-color:rgba(192, 217.6, 256, 1) ;
+}
+
+.example::before {
+	color: rgb(0, 46, 107);
+	content: "Example. ";
+	font-weight: bold;
+}
+
+.lemma {
+	margin:10px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 90%;
+	padding:2%;
+	border: 2px solid black; 
+	background-color:rgba(256, 243.2, .6, 1) ;
+}
+
+.lemma::before {
+	color: rgb(0, 46, 107);
+	content: "Lemma. ";
+	font-weight: bold;
+}
+
+.proposition {
+	margin:10px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 90%;
+	padding:2%;
+	border: 2px solid black; 
+	background-color:rgba(256, 204.8, 128, 1) ;
+}
+
+.proposition::before {
+	color: rgb(0, 46, 107);
+	content: "Proposition. ";
 	font-weight: bold;
 }
 
@@ -268,7 +316,7 @@ img {
 	width: 90%;
 	padding:2%;
 	/* border: 1px solid blue; */
-	background-color:rgba(199, 128, 254, 0.15) ;
+	background-color:rgba(199, 128, 254, 1) ;
 }
 
 .theorem::before {
@@ -277,35 +325,19 @@ img {
 	font-weight: bold;
 }
 
-.lemma {
+.corollary {
 	margin:10px;
 	margin-left: auto;
 	margin-right: auto;
 	width: 90%;
 	padding:2%;
 	/* border: 1px solid blue; */
-	background-color:rgba(206, 172, 255, 0.15) ;
+	background-color:rgba(204.8, 185.6, 224, 0.1) ;
 }
 
-.lemma::before {
-	color: rgb(57, 0, 142);
-	content: "Lemma. ";
-	font-weight: bold;
-}
-
-.example {
-	margin:10px;
-	margin-left: auto;
-	margin-right: auto;
-	width: 90%;
-	padding:2%;
-	/* border: 1px solid blue; */
-	background-color:rgba(0, 0, 0, 0.05); ;
-}
-
-.example::before {
-	color: rgb(0, 0, 0);
-	content: "Example. ";
+.corollary::before {
+	color: rgb(86, 0, 136);
+	content: "Corollary. ";
 	font-weight: bold;
 }
 
