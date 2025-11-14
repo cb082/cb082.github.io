@@ -49,13 +49,13 @@
   padding: 6px 8px 6px 16px;
   text-decoration: none;
   font-size: 15px;
-  color: #818181;
+  color: #ffffff;
   display: block;
 }
 
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
-  color: #f1f1f1;
+  color: #25108e;
 }
 
 /* Style page content */
@@ -71,9 +71,14 @@
   .sidenav a {font-size: 18px;}
 }
 
+.body{
+	text-align: left;
+}
+
+
 /* Stolen from  https://stackoverflow.com/questions/10405945/html-ordered-list-1-1-1-2-nested-counters-and-scope-not-working */
 .section-listing {
-	counter-reset: section -1;
+	counter-reset: section 0;
 	list-style-type: none;
 }
 
