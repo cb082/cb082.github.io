@@ -14,6 +14,7 @@
 .coursetable {
     border:#eee 1px solid;
     margin: 10px;
+	text-align: left;
 }
 
 .coursetable tr td {
@@ -60,7 +61,7 @@
 
 /* Style page content */
 .main {
-  /*margin-left: 160px;  Same as the width of the sidebar */
+  margin-left: 160px;  /*Same as the width of the sidebar*/
   text-align: left;
   padding: 0px 10px;
 }
@@ -266,6 +267,7 @@ img {
 }
 
 .definition::before {
+	text-align: left;
 	color: black;
 	content: "Definition. ";
 	font-weight: bold;
@@ -282,6 +284,7 @@ img {
 }
 
 .example::before {
+	text-align: left;
 	color: black;
 	content: "Example. ";
 	font-weight: bold;
@@ -298,6 +301,7 @@ img {
 }
 
 .lemma::before {
+	text-align: left;
 	color: black;
 	content: "Lemma. ";
 	font-weight: bold;
@@ -314,6 +318,7 @@ img {
 }
 
 .proposition::before {
+	text-align: left;
 	color: black;
 	content: "Proposition. ";
 	font-weight: bold;
@@ -330,6 +335,7 @@ img {
 }
 
 .theorem::before {
+	text-align: left;
 	color: black;
 	content: "Theorem. ";
 	font-weight: bold;
@@ -346,6 +352,7 @@ img {
 }
 
 .corollary::before {
+	text-align: left;
 	color: black;
 	content: "Corollary. ";
 	font-weight: bold;
