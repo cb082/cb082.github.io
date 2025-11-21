@@ -308,6 +308,7 @@ img {
 }
 
 .proposition {
+	text-align: left;
 	margin:10px;
 	margin-left: auto;
 	margin-right: auto;
@@ -318,7 +319,6 @@ img {
 }
 
 .proposition::before {
-	text-align: left;
 	color: black;
 	content: "Proposition. ";
 	font-weight: bold;
