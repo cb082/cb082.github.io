@@ -59,6 +59,20 @@
   color: orange;
 }
 
+.sidenav b {
+  padding: 6px 0px 6px 16px;
+  text-decoration: none;
+  font-size: 13px;
+  color: #ffffff;
+  display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav b:hover {
+  color: red;
+}
+
+
 /* Style page content */
 .main {
   margin-left: 160px;  /*Same as the width of the sidebar*/
