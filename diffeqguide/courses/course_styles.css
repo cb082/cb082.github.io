@@ -11,6 +11,10 @@
 	padding-bottom: 0;
 }
 
+body {
+  text-align: left;
+}
+
 .coursetable {
     border:#eee 1px solid;
     margin: 10px;
