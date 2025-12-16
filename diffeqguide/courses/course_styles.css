@@ -299,6 +299,8 @@ img {
 	border-top-left-radius: 15px;
 	border-top-right-radius: 15px;
 	background-color:rgba(192, 217.6, 256, 1) ;
+	text-align: left;
+
 }
 
 .example::before {
