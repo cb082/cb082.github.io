@@ -11,10 +11,43 @@
 	padding-bottom: 0;
 }
 
+/*Start grid layout settings*/
+
+.container {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "menu content"
+    "footer footer";
+  grid-template-columns: 1fr 3fr;
+  gap: 3px;
+  background-color: dodgerblue;
+  padding: 5px;
+}
+.container div {
+  background-color: white;
+  padding: 10px;
+}
+.container div.header {
+  grid-area: header;
+  text-align: center;
+}
+.container div.sidenav {
+  grid-area: menu;
+}
+.container div.content {
+  grid-area: content;
+}
+.container div.footer {
+  grid-area: footer;
+  text-align: center;  
+}
+/*End of grid layout*/
+
 /* Top menu settings*/
 /* Add a black background color to the top navigation */
 .topnav {
-  background-color: #333;
+  background-color: rgba(7,24,141,1);
   overflow: hidden;
 }
 
@@ -25,21 +58,21 @@
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 15px;
 }
 
 /* Change the color of links on hover */
 .topnav a:hover {
-  background-color: #ddd;
+  background-color: rgba(242,152,54);
   color: black;
 }
 
 /* Add a color to the active/current link */
 .topnav a.active {
-  background-color: #04AA6D;
+  background-color: #793e04;
   color: white;
 }
-
+/*End of Top Menu settings*/
 
 body {
   text-align: left;
