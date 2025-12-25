@@ -14,7 +14,7 @@ def create_page(header, footer, body, filename, course_folder = None, next_page_
     is_notes_page = "notes" in filename
 
     if is_notes_page :
-        backforwardlinks = "<div style=\"border: none; margin-bottom: -25px; padding: 0px; text-align: right;\">"
+        backforwardlinks = "<div style=\"border: none; margin-bottom: 0px; padding: 0px; text-align: right;\">"
 
         if prev_page_name and ("notes" in prev_page_name) :
             cleaned_up_name = prev_page_name.replace("_", " ").replace(".html", "")[11:]
