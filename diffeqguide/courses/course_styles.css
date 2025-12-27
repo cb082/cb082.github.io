@@ -24,7 +24,10 @@
 }
 .container div.sidenav {
   grid-area: menu;
-  position: fixed;
+  display: flex;
+  position: sticky;
+  top: 0;
+  
 }
 .container div.content {
   grid-area: content;
