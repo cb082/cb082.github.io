@@ -159,17 +159,17 @@ body {
 }
 
 
-@media only screen and (max-width: 500px) {
+/*@media only screen and (max-width: 500px) {
 .link {
 	padding-top: 15px;
 	padding-bottom: 15px;
 }
-}
+}*/
 
 /* The sidebar menu */
 
 /* The navigation menu links */
-.sidenav a {
+.nav a {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
   font-size: 15px;
@@ -178,11 +178,11 @@ body {
 }
 
 /* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
+.nav a:hover {
   color: orange;
 }
 
-.sidenav aa {
+.nav aa {
   padding: 6px 0px 6px 16px;
   text-decoration: none;
   font-size: 13px;
@@ -192,31 +192,12 @@ body {
 }
 
 /* When you mouse over the navigation links, change their color */
-.sidenav aa:hover {
+.nav aa:hover {
   color: red;
 }
 /* End of sidenav*/
 
-/* Style page content */
-.main {
-  margin-left: 160px;  /*Same as the width of the sidebar*/
-  text-align: left;
-  padding: 0px 10px;
-}
 
-/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-
-p {
-	text-align: left;
-}
-
-ul {
-	text-align: left;
-}
 
 
 /* Stolen from  https://stackoverflow.com/questions/10405945/html-ordered-list-1-1-1-2-nested-counters-and-scope-not-working */
