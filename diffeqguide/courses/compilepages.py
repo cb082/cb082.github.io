@@ -40,9 +40,7 @@ def create_page(header, footer, body, filename, course_folder = None, next_page_
     page_string = f"<!-- THIS IS A COMPILED FILE \n Compiled on {current_date} -->" \
         + "\n"*100 \
         + header \
-        + backforwardblock\
         + body \
-        + backforwardblock\
         + footer\
         # + backforwardblock\
     
