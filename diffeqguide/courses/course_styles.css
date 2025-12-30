@@ -45,9 +45,9 @@ nav ul {
 }
 
 @media (min-width: 768px) {
-	.head {
+	/*.head {
 		position:fixed;
-	}
+	}*/
 
   .nav {
     grid-column: col-start / span 2;
@@ -195,6 +195,8 @@ body {
   font-size: 13px;
   margin-left: 10px;
   color: #ffffff;
+    background-color: rgb(5, 5, 115);
+
   display: block;
 }
 
