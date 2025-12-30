@@ -45,6 +45,10 @@ nav ul {
 }
 
 @media (min-width: 768px) {
+	.head {
+		position:fixed;
+	}
+
   .nav {
     grid-column: col-start / span 2;
     grid-row: 2 / 4;
