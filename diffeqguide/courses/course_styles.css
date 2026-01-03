@@ -24,18 +24,18 @@ nav ul {
   grid-column: col-start / span 12;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 576px) and (max-width: 767px) {
 	.nav {
 		background-color: rgb(6, 6, 89);
 		grid-row: 2;
 	}
-	.sidebar {
+	/*.sidebar {
 		grid-column: col-start / span 3;
     	grid-row: 3;
   	}
 	.ads {
     	grid-column: col-start / span 3;
-	}
+	}*/
 	.content, .footer {
 		grid-column: col-start / span 12;
 	}
@@ -64,12 +64,12 @@ nav ul {
 		grid-column: col-start 3 / span 12;
 		grid-row: 2 / 4;
 	}
-	.sidebar {
+	/*.sidebar {
 		grid-column: col-start 11 / span 2;
 	}
 	.ads {
 		grid-column: col-start 11 / span 2;
-	}
+	}*/
 	.footer {
 		grid-column: col-start / span 12;
 	}
@@ -210,6 +210,7 @@ body {
 /* When you mouse over the navigation links, change their color */
 .nav aa:hover {
   color: red;
+  background-color: black;
 }
 /* End of sidenav*/
 
