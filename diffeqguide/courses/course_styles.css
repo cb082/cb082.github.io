@@ -37,7 +37,7 @@ nav ul {
     	grid-column: col-start / span 3;
 	}*/
 	.content {
-		grid-column: col-start 2 / span 8
+		grid-column: col-start 2 / span 8;
 	} 
 	
 	.footer {
