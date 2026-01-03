@@ -1,27 +1,27 @@
 /*Start grid layout settings*/
 
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 .container {
-  display: grid;
-  grid-template-columns: repeat(12, [col-start] 1fr);
-  gap: 5px;
+	display: grid;
+	grid-template-columns: repeat(12, [col-start] 1fr);
+	gap: 5px;
 }
 
 nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 /* Mobile first */
 .container > * {
-  /*border: 1px solid green;
-  background-color: beige;*/
-  padding: 0px;
-  grid-column: col-start / span 12;
+	/*border: 1px solid green;
+	background-color: beige;*/
+	padding: 0px;
+	grid-column: col-start / span 12;
 }
 
 @media (min-width: 576px) and (max-width: 767px) {
@@ -36,7 +36,11 @@ nav ul {
 	.ads {
     	grid-column: col-start / span 3;
 	}*/
-	.content, .footer {
+	.content {
+		grid-column: col-start 2 / span 8
+	} 
+	
+	.footer {
 		grid-column: col-start / span 12;
 	}
 
@@ -61,7 +65,7 @@ nav ul {
 		background-color: rgb(6, 6, 89);
 	}
 	.content {
-		grid-column: col-start 3 / span 12;
+		grid-column: col-start 4 / span 8;
 		grid-row: 2 / 4;
 	}
 	/*.sidebar {
@@ -83,38 +87,38 @@ nav ul {
 }
 
 /*.container {
-  display: grid;
-  grid-template-areas:
-    "header header"
-    "menu content"
-    "footer footer";
-  grid-template-columns: 1fr 3fr;
-  gap: 3px;
-  background-color: rgb(255, 30, 30);
-  padding: 5px;
+	display: grid;
+	grid-template-areas:
+		"header header"
+		"menu content"
+		"footer footer";
+	grid-template-columns: 1fr 3fr;
+	gap: 3px;
+	background-color: rgb(255, 30, 30);
+	padding: 5px;
 }
 .container div {
-  background-color: white;
-  padding: 10px;
+	background-color: white;
+	padding: 10px;
 }
 .container div.header {
-  grid-area: header;
-  text-align: center;
-  position: fixed;
+	grid-area: header;
+	text-align: center;
+	position: fixed;
 }
 .container div.sidenav {
-  grid-area: menu;
-  display: flex;
-  position: sticky;
-  top: 0;
+	grid-area: menu;
+	display: flex;
+	position: sticky;
+	top: 0;
   
 }
 .container div.content {
-  grid-area: content;
+	grid-area: content;
 }
 .container div.footer {
-  grid-area: footer;
-  text-align: center;  
+	grid-area: footer;
+	text-align: center;  
 } */
 
 
@@ -127,35 +131,35 @@ nav ul {
 /* Top menu settings*/
 /* Add a black background color to the top navigation */
 .topnav {
-  background-color: rgba(7,24,141,1);
-  overflow: hidden;
+	background-color: rgba(7,24,141,1);
+	overflow: hidden;
 }
 
 /* Style the links inside the navigation bar */
 .topnav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 15px;
+	float: left;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 15px;
 }
 
 /* Change the color of links on hover */
 .topnav a:hover {
-  background-color: rgba(242,152,54);
-  color: black;
+	background-color: rgba(242,152,54);
+	color: black;
 }
 
 /* Add a color to the active/current link */
 .topnav a.active {
-  background-color: #793e04;
-  color: white;
+	background-color: #793e04;
+	color: white;
 }
 /*End of Top Menu settings*/
 
 body {
-  text-align: left;
+	text-align: left;
 }
 
 .coursetable {
@@ -183,34 +187,34 @@ body {
 
 /* The navigation menu links */
 .nav a {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 15px;
-  color: #ffffff;
-  background-color: rgb(6, 6, 89);
-  display: block;
+	padding: 6px 8px 6px 16px;
+	text-decoration: none;
+	font-size: 14px;
+	color: #ffffff;
+	background-color: rgb(6, 6, 89);
+	display: block;
 }
 
 /* When you mouse over the navigation links, change their color */
 .nav a:hover {
-  color: orange;
+	color: orange;
 }
 
 .nav aa {
-  padding: 6px 0px 6px 16px;
-  text-decoration: none;
-  font-size: 13px;
-  margin-left: 10px;
-  color: #ffffff;
-    background-color: rgb(78, 78, 79);
+	padding: 6px 0px 6px 16px;
+	text-decoration: none;
+	font-size: 14px;
+	margin-left: 10px;
+  	color: #ffffff;
+	background-color: rgb(78, 78, 79);
 
   display: block;
 }
 
 /* When you mouse over the navigation links, change their color */
 .nav aa:hover {
-  color: red;
-  background-color: black;
+	color: red;
+	border-color: gray;
 }
 /* End of sidenav*/
 
