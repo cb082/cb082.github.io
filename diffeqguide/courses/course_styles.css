@@ -168,7 +168,7 @@ nav ul {
 /* Sidebar Menu Settings */
 
 /* The navigation menu links */
-.nav a {
+.nav a.section {
 	padding: 6px 8px 6px 16px;
 	text-decoration: none;
 	font-size: 14px;
@@ -178,13 +178,13 @@ nav ul {
 }
 
 /* When you mouse over the navigation links, change their color */
-.nav a:hover {
+.nav a.section :hover {
 	color: orange;
 	border:3px;
 	border-color: yellow;
 }
 
-.nav aa {
+.nav a.subsection {
 	padding: 6px 0px 6px 16px;
 	text-decoration: none;
 	font-size: 14px;
@@ -196,10 +196,11 @@ nav ul {
 }
 
 /* When you mouse over the navigation links, change their color */
-.nav aa:hover {
+.nav a.subsection :hover {
 	color: orange;
 	border:3px;
 	border-color: yellow;
+	background-color: black;
 }
 /* End Sidebar Menu Settings*/
 
@@ -442,6 +443,27 @@ img {
 	text-align: left;
 	color: black;
 	content: "Example. ";
+	font-weight: bold;
+}
+
+.examples {
+	margin:10px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 90%;
+	padding:2%;
+	border: 1.25px solid black;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	background-color:rgba(192, 217.6, 256, 1) ;
+	text-align: left;
+
+}
+
+.examples::before {
+	text-align: left;
+	color: black;
+	content: "Examples. ";
 	font-weight: bold;
 }
 
