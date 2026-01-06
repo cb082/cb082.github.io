@@ -1,5 +1,9 @@
 /*Start grid layout settings*/
 
+body {
+	text-align: left;
+}
+
 * {
 	box-sizing: border-box;
 }
@@ -8,6 +12,7 @@
 	display: grid;
 	grid-template-columns: repeat(12, [col-start] 1fr);
 	gap: 5px;
+	background-color: rgb(250, 247, 244)
 }
 
 nav ul {
@@ -128,7 +133,7 @@ nav ul {
 
 /*End of grid layout*/
 
-/* Top menu settings*/
+/* Top Menu Settings*/
 /* Add a black background color to the top navigation */
 .topnav {
 	background-color: rgba(7,24,141,1);
@@ -147,8 +152,10 @@ nav ul {
 
 /* Change the color of links on hover */
 .topnav a:hover {
-	background-color: rgba(242,152,54);
+	background-color: rgb(242,152,54);
 	color: black;
+	border:3px;
+	border-color: yellow;
 }
 
 /* Add a color to the active/current link */
@@ -156,34 +163,9 @@ nav ul {
 	background-color: #793e04;
 	color: white;
 }
-/*End of Top Menu settings*/
+/*End Top Menu Settings*/
 
-body {
-	text-align: left;
-}
-
-.coursetable {
-    border:#eee 1px solid;
-    margin: 10px;
-	text-align: left;
-}
-
-.coursetable tr td {
-    border-top:#eee 1px solid;
-    border-left:#eee 1px solid;
-    padding: 10px;
-    /* padding-right: 10px; */
-}
-
-
-/*@media only screen and (max-width: 500px) {
-.link {
-	padding-top: 15px;
-	padding-bottom: 15px;
-}
-}*/
-
-/* The sidebar menu */
+/* Sidebar Menu Settings */
 
 /* The navigation menu links */
 .nav a {
@@ -198,6 +180,8 @@ body {
 /* When you mouse over the navigation links, change their color */
 .nav a:hover {
 	color: orange;
+	border:3px;
+	border-color: yellow;
 }
 
 .nav aa {
@@ -213,10 +197,11 @@ body {
 
 /* When you mouse over the navigation links, change their color */
 .nav aa:hover {
-	color: red;
-	border-color: gray;
+	color: orange;
+	border:3px;
+	border-color: yellow;
 }
-/* End of sidenav*/
+/* End Sidebar Menu Settings*/
 
 
 
@@ -251,6 +236,29 @@ body {
 }
 
 /* --- */
+
+
+
+.coursetable {
+    border:#eee 1px solid;
+    margin: 10px;
+	text-align: left;
+}
+
+.coursetable tr td {
+    border-top:#eee 1px solid;
+    border-left:#eee 1px solid;
+    padding: 10px;
+    /* padding-right: 10px; */
+}
+
+
+/*@media only screen and (max-width: 500px) {
+.link {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+}*/
 
 .figure {
 	font-style: italic;
