@@ -2,6 +2,7 @@
 
 body {
 	text-align: left;
+	background-color: rgb(250, 247, 244)
 }
 
 * {
@@ -12,7 +13,6 @@ body {
 	display: grid;
 	grid-template-columns: repeat(12, [col-start] 1fr);
 	gap: 5px;
-	background-color: rgb(250, 247, 244)
 }
 
 nav ul {
