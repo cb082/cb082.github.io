@@ -1,105 +1,109 @@
-<h1>Interactive Fourier Series Visualization Module</h1>
+<div class = "content">
 
-<p class="note">
-This page embeds <strong>SageMathCell</strong> to compute Fourier coefficients and plot the partial sums.
-After the page loads, click the blue button in each section (<em>Run Fourier Visualization</em>), then adjust
-the slider for \(N\) to see the Fourier approximation converge.
-</p>
+  <h2>Interactive Fourier Series Visualization Module</h2>
 
-<p>
-We visualize Fourier series on \([-L, L]\) (default \(L=\pi\)):
-\[
-f(x) \sim \frac{a_0}{2} + \sum_{n=1}^{\infty}
-\left( a_n \cos\!\left(\frac{n\pi x}{L}\right) + b_n \sin\!\left(\frac{n\pi x}{L}\right) \right),
-\]
-with
-\[
-a_n = \frac{1}{L}\!\int_{-L}^{L} f(x)\cos\!\left(\frac{n\pi x}{L}\right)\,dx,\quad
-b_n = \frac{1}{L}\!\int_{-L}^{L} f(x)\sin\!\left(\frac{n\pi x}{L}\right)\,dx.
-\]
-</p>
+  <p class="note">
+  This page embeds <strong>SageMathCell</strong> to compute Fourier coefficients and plot the partial sums.
+  After the page loads, click the blue button in each section (<em>Run Fourier Visualization</em>), then adjust
+  the slider for \(N\) to see the Fourier approximation converge.
+  </p>
 
-<h2>1) Odd Function: \( f(x) = x \)</h2>
-<section id="odd">
-  <p>For this odd function, the Fourier series has only <em>sine</em> terms.</p>
-  <div class="sagecell">
-    <textarea>
-var('x, n')
-f(x) = x
-L = pi
+  <p>
+  We visualize Fourier series on \([-L, L]\) (default \(L=\pi\)):
+  \[
+  f(x) \sim \frac{a_0}{2} + \sum_{n=1}^{\infty}
+  \left( a_n \cos\!\left(\frac{n\pi x}{L}\right) + b_n \sin\!\left(\frac{n\pi x}{L}\right) \right),
+  \]
+  with
+  \[
+  a_n = \frac{1}{L}\!\int_{-L}^{L} f(x)\cos\!\left(\frac{n\pi x}{L}\right)\,dx,\quad
+  b_n = \frac{1}{L}\!\int_{-L}^{L} f(x)\sin\!\left(\frac{n\pi x}{L}\right)\,dx.
+  \]
+  </p>
 
-a0 = (1/L)*integral(f(x), (x, -L, L))
-an(n) = (1/L)*integral(f(x)*cos(n*pi*x/L), (x, -L, L))
-bn(n) = (1/L)*integral(f(x)*sin(n*pi*x/L), (x, -L, L))
+  <h2>1) Odd Function: \( f(x) = x \)</h2>
+  <section id="odd">
+    <p>For this odd function, the Fourier series has only <em>sine</em> terms.</p>
+    <div class="sagecell">
+      <textarea>
+  var('x, n')
+  f(x) = x
+  L = pi
 
-def S_N(x, N):
-    return a0/2 + sum(an(k)*cos(k*pi*x/L) + bn(k)*sin(k*pi*x/L) for k in range(1, N+1))
+  a0 = (1/L)*integral(f(x), (x, -L, L))
+  an(n) = (1/L)*integral(f(x)*cos(n*pi*x/L), (x, -L, L))
+  bn(n) = (1/L)*integral(f(x)*sin(n*pi*x/L), (x, -L, L))
 
-@interact
-def _(N=(1, 30)):
-    show(plot(f(x), (x, -L, L), color='black', thickness=3, legend_label='f(x)')
-         + plot(S_N(x, N), (x, -L, L), color='red', legend_label=f'N={N}'),
-         ymin=-4, ymax=4, figsize=5)
-    </textarea>
-  </div>
-</section>
+  def S_N(x, N):
+      return a0/2 + sum(an(k)*cos(k*pi*x/L) + bn(k)*sin(k*pi*x/L) for k in range(1, N+1))
 
-<h2>2) Even Function: \( f(x) = |x| \)</h2>
-<section id="even">
-  <p>For this even function, the Fourier series has only <em>cosine</em> terms.</p>
-  <div class="sagecell">
-    <textarea>
-var('x, n')
-f(x) = abs(x)
-L = pi
+  @interact
+  def _(N=(1, 30)):
+      show(plot(f(x), (x, -L, L), color='black', thickness=3, legend_label='f(x)')
+          + plot(S_N(x, N), (x, -L, L), color='red', legend_label=f'N={N}'),
+          ymin=-4, ymax=4, figsize=5)
+      </textarea>
+    </div>
+  </section>
 
-a0 = (1/L)*integral(f(x), (x, -L, L))
-an(n) = (1/L)*integral(f(x)*cos(n*pi*x/L), (x, -L, L))
-bn(n) = (1/L)*integral(f(x)*sin(n*pi*x/L), (x, -L, L))
+  <h2>2) Even Function: \( f(x) = |x| \)</h2>
+  <section id="even">
+    <p>For this even function, the Fourier series has only <em>cosine</em> terms.</p>
+    <div class="sagecell">
+      <textarea>
+  var('x, n')
+  f(x) = abs(x)
+  L = pi
 
-def S_N(x, N):
-    return a0/2 + sum(an(k)*cos(k*pi*x/L) + bn(k)*sin(k*pi*x/L) for k in range(1, N+1))
+  a0 = (1/L)*integral(f(x), (x, -L, L))
+  an(n) = (1/L)*integral(f(x)*cos(n*pi*x/L), (x, -L, L))
+  bn(n) = (1/L)*integral(f(x)*sin(n*pi*x/L), (x, -L, L))
 
-@interact
-def _(N=(1, 30)):
-    show(plot(f(x), (x, -L, L), color='black', thickness=3, legend_label='f(x)')
-         + plot(S_N(x, N), (x, -L, L), color='blue', legend_label=f'N={N}'),
-         ymin=-1, ymax=4, figsize=5)
-    </textarea>
-  </div>
-</section>
+  def S_N(x, N):
+      return a0/2 + sum(an(k)*cos(k*pi*x/L) + bn(k)*sin(k*pi*x/L) for k in range(1, N+1))
 
-<h2>3) Custom Function</h2>
-<section id="custom">
-  <p>Enter any function of <code>x</code> (e.g., <code>sin(x)</code>, <code>x^2</code>, <code>abs(x)</code>, or a <code>piecewise</code> definition).</p>
-  <div class="sagecell">
-    <textarea>
-var('x, n')
-# Enter your function below:
-f(x) = x^2   # Change this line to define your own function
-L = pi
+  @interact
+  def _(N=(1, 30)):
+      show(plot(f(x), (x, -L, L), color='black', thickness=3, legend_label='f(x)')
+          + plot(S_N(x, N), (x, -L, L), color='blue', legend_label=f'N={N}'),
+          ymin=-1, ymax=4, figsize=5)
+      </textarea>
+    </div>
+  </section>
 
-a0 = (1/L)*integral(f(x), (x, -L, L))
-an(n) = (1/L)*integral(f(x)*cos(n*pi*x/L), (x, -L, L))
-bn(n) = (1/L)*integral(f(x)*sin(n*pi*x/L), (x, -L, L))
+  <h2>3) Custom Function</h2>
+  <section id="custom">
+    <p>Enter any function of <code>x</code> (e.g., <code>sin(x)</code>, <code>x^2</code>, <code>abs(x)</code>, or a <code>piecewise</code> definition).</p>
+    <div class="sagecell">
+      <textarea>
+  var('x, n')
+  # Enter your function below:
+  f(x) = x^2   # Change this line to define your own function
+  L = pi
 
-def S_N(x, N):
-    return a0/2 + sum(an(k)*cos(k*pi*x/L) + bn(k)*sin(k*pi*x/L) for k in range(1, N+1))
+  a0 = (1/L)*integral(f(x), (x, -L, L))
+  an(n) = (1/L)*integral(f(x)*cos(n*pi*x/L), (x, -L, L))
+  bn(n) = (1/L)*integral(f(x)*sin(n*pi*x/L), (x, -L, L))
 
-@interact
-def _(N=(1, 30)):
-    show(plot(f(x), (x, -L, L), color='black', thickness=3, legend_label='f(x)')
-         + plot(S_N(x, N), (x, -L, L), color='green', legend_label=f'N={N}'),
-         ymin=-4, ymax=4, figsize=5)
-    </textarea>
-  </div>
-</section>
+  def S_N(x, N):
+      return a0/2 + sum(an(k)*cos(k*pi*x/L) + bn(k)*sin(k*pi*x/L) for k in range(1, N+1))
 
-<script>
-  // Initialize all Sage cells on the page
-  sagecell.makeSagecell({
-    inputLocation: '.sagecell',
-    evalButtonText: 'Run Fourier Visualization',
-    linked: false
-  });
-</script>
+  @interact
+  def _(N=(1, 30)):
+      show(plot(f(x), (x, -L, L), color='black', thickness=3, legend_label='f(x)')
+          + plot(S_N(x, N), (x, -L, L), color='green', legend_label=f'N={N}'),
+          ymin=-4, ymax=4, figsize=5)
+      </textarea>
+    </div>
+  </section>
+
+  <script>
+    // Initialize all Sage cells on the page
+    sagecell.makeSagecell({
+      inputLocation: '.sagecell',
+      evalButtonText: 'Run Fourier Visualization',
+      linked: false
+    });
+  </script>
+
+</div>
