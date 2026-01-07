@@ -206,22 +206,22 @@ nav ul {
 
 /* My Footer*/
 
-ul.myfooter {
+.myfooter ul {
     display: table;
     width: 100%;
 }
 
-li.myfooteritem {
+.myfooter li ul {
     border: 1px solid grey;
     display: table-cell;
     width: 33%;
 }
 
-li.myfooteritem:nth-child(2) {
+.myfooter li :nth-child(2) {
     text-align: center;
 }
 
-li.myfooteritem:last-child {
+.myfooter li :last-child {
     text-align: right;
 }
 

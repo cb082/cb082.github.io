@@ -134,7 +134,7 @@
 <!-- Header Section -->
 <div class = "container">
 	<div class="head" id="course_head">
-	<h1 style="margin-top: 3; margin-bottom: 4; margin-left: 10; text-align: left;">Differential Equations Guide</h1>
+	<h1> Differential Equations Guide </h1>
 
 	<div class = topnav id="links" style = "font-family: Verdana, sans-serif;">
 		<!-- * Customize for each course * -->
@@ -151,54 +151,50 @@
 
 
 
-<!-- <div id="stuff"> --><h1>Module: Fourier Series (Sines and Cosines)</h1>
+<!-- <div id="stuff"> --><div class = "content">
 
-  <h2>Learning Objectives</h2>
-  <ul>
-    <li>Define the Fourier series representation of a periodic function.</li>
-    <li>Compute Fourier coefficients using sine and cosine terms.</li>
-    <li>Use symmetry (even/odd) to simplify calculations.</li>
-    <li>Construct half-range expansions for functions defined on \([0, L]\).</li>
-    <li>Understand convergence properties and the Gibbs phenomenon.</li>
-  </ul>
+  <h2>Module: Fourier Series (Sines and Cosines)</h2>
 
-  <h2>1. Theory and Formulas</h2>
-  <p>
-    Suppose \(f(x)\) is a function of period \(2L\). Its Fourier series expansion is
-  </p>
-  <p>
-    \[
-    f(x) \sim \frac{a_0}{2} + \sum_{n=1}^{\infty}
-    \left( a_n \cos\!\left(\frac{n\pi x}{L}\right) + b_n \sin\!\left(\frac{n\pi x}{L}\right) \right),
-    \]
-  </p>
-  <p>with coefficients</p>
-  <p>
-    \[
-    a_n = \frac{1}{L}\int_{-L}^{L} f(x)\cos\!\left(\frac{n\pi x}{L}\right)\,dx, \quad
-    b_n = \frac{1}{L}\int_{-L}^{L} f(x)\sin\!\left(\frac{n\pi x}{L}\right)\,dx.
-    \]
-  </p>
-  <p>and</p>
-  <p>
-    \[
-    a_0 = \frac{1}{L}\int_{-L}^{L} f(x)\,dx.
-    \]
-  </p>
+    <h2>Learning Objectives</h2>
+    <ul>
+      <li>Define the Fourier series representation of a periodic function.</li>
+      <li>Compute Fourier coefficients using sine and cosine terms.</li>
+      <li>Use symmetry (even/odd) to simplify calculations.</li>
+      <li>Construct half-range expansions for functions defined on \([0, L]\).</li>
+      <li>Understand convergence properties and the Gibbs phenomenon.</li>
+    </ul>
 
-  <h3>Even/Odd Simplifications</h3>
-  <ul>
-    <li>If \(f\) is even, all \(b_n = 0\) and we use only cosines:
+    <h2>1. Theory and Formulas</h2>
+    <p>
+      Suppose \(f(x)\) is a function of period \(2L\). Its Fourier series expansion is
       \[
-      a_n = \frac{2}{L}\int_0^L f(x)\cos\!\left(\frac{n\pi x}{L}\right)\,dx.
+      f(x) \sim \frac{a_0}{2} + \sum_{n=1}^{\infty}
+      \left( a_n \cos\!\left(\frac{n\pi x}{L}\right) + b_n \sin\!\left(\frac{n\pi x}{L}\right) \right),
       \]
-    </li>
-    <li>If \(f\) is odd, all \(a_n = 0\) and we use only sines:
+     with coefficients 
       \[
-      b_n = \frac{2}{L}\int_0^L f(x)\sin\!\left(\frac{n\pi x}{L}\right)\,dx.
+      a_n = \frac{1}{L}\int_{-L}^{L} f(x)\cos\!\left(\frac{n\pi x}{L}\right)\,dx, \quad
+      b_n = \frac{1}{L}\int_{-L}^{L} f(x)\sin\!\left(\frac{n\pi x}{L}\right)\,dx.
       \]
-    </li>
-  </ul>
+    and 
+    \[
+      a_0 = \frac{1}{L}\int_{-L}^{L} f(x)\,dx.
+    \]
+    </p>
+
+    <h3>Even/Odd Simplifications</h3>
+      <ul>
+        <li>If \(f\) is even, all \(b_n = 0\) and we use only cosines:
+          \[
+          a_n = \frac{2}{L}\int_0^L f(x)\cos\!\left(\frac{n\pi x}{L}\right)\,dx.
+          \]
+        </li>
+        <li>If \(f\) is odd, all \(a_n = 0\) and we use only sines:
+          \[
+          b_n = \frac{2}{L}\int_0^L f(x)\sin\!\left(\frac{n\pi x}{L}\right)\,dx.
+          \]
+        </li>
+      </ul>
 
   <h3>Half-Range Expansions</h3>
   <p>
@@ -294,11 +290,11 @@
 </div>-->
 
         <div class = footer>
-                <ul class = "myfooter">
-                        <li class = "myfooter">  </li>
-                        <li class = "myfooter"> <a href=""><span class="link">Top</span></a> </li>
-                        <li class = "myfooter"> <a href="https://docs.google.com/forms/d/e/1FAIpQLSfmUZAExHH54KQLaDVPtUwZyKMPaoi57pOqluhI4ECWeLWLVA/viewform"> Submit Comments</a> </li>
-                </ul>
+                <div class = "myfooter"> <ul>
+                        <li>  </li>
+                        <li> <a href=""><span class="link">Top</span></a> </li>
+                        <li> <a href="https://docs.google.com/forms/d/e/1FAIpQLSfmUZAExHH54KQLaDVPtUwZyKMPaoi57pOqluhI4ECWeLWLVA/viewform"> Submit Comments</a> </li>
+                </ul> </div>
         </div>
 </body>
 
