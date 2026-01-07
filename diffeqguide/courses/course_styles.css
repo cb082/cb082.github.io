@@ -211,17 +211,17 @@ nav ul {
     width: 100%;
 }
 
-.myfooter li ul {
+.myfooter li {
     border: 1px solid grey;
     display: table-cell;
     width: 33%;
 }
 
-.myfooter li :nth-child(2) {
+.myfooter li:nth-child(2) {
     text-align: center;
 }
 
-.myfooter li :last-child {
+.myfooter li:last-child {
     text-align: right;
 }
 
