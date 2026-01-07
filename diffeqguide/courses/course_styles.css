@@ -168,7 +168,8 @@ nav ul {
 /* Sidebar Menu Settings */
 
 /* The navigation menu links */
-.nav a.section {
+.nav a {
+	font-family: Verdana, sans-serif;
 	padding: 6px 8px 6px 16px;
 	text-decoration: none;
 	font-size: 14px;
@@ -178,25 +179,24 @@ nav ul {
 }
 
 /* When you mouse over the navigation links, change their color */
-.nav a.section :hover {
+.nav a :hover {
 	color: orange;
 	border:3px;
 	border-color: yellow;
 }
 
-.nav a.subsection {
+.subnav a {
 	padding: 6px 0px 6px 16px;
 	text-decoration: none;
 	font-size: 14px;
 	margin-left: 10px;
   	color: #ffffff;
 	background-color: rgb(78, 78, 79);
-
-  display: block;
+	display: block;
 }
 
 /* When you mouse over the navigation links, change their color */
-.nav a.subsection :hover {
+.subnav a :hover {
 	color: orange;
 	border:3px;
 	border-color: yellow;
