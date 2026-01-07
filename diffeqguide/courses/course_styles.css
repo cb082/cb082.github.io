@@ -205,23 +205,24 @@ nav ul {
 /* End Sidebar Menu Settings*/
 
 /* My Footer*/
+/* Stolen from https://stackoverflow.com/questions/14920401/how-to-simulate-hfill-with-html-and-css */
 
-.myfooter ul {
+.footer ul {
     display: table;
     width: 100%;
 }
 
-.myfooter li {
-    border: 1px solid grey;
+.footer li {
+    /*border: 1px solid grey;*/
     display: table-cell;
     width: 33%;
 }
 
-.myfooter li:nth-child(2) {
+.footer li:nth-child(2) {
     text-align: center;
 }
 
-.myfooter li:last-child {
+.footer li:last-child {
     text-align: right;
 }
 
