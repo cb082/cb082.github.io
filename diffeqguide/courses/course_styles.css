@@ -15,7 +15,7 @@ body {
 	gap: 5px;
 }
 
-nav ul {
+.nav ul {
 	list-style: none;
 	margin: 0;
 	padding: 0;
@@ -46,12 +46,12 @@ nav ul {
 	} 
 	
 	.footer {
-		position:fixed;
-		bottom:0;
+		/*position:fixed;
+		bottom:0;*/ 
 		grid-column: col-start / span 12;
 	}
 
-	nav ul {
+	.nav ul {
 		display: flex;
 		position: sticky;
 		top: 0;
@@ -83,10 +83,10 @@ nav ul {
 	}*/
 	.footer {
 		grid-column: col-start / span 12;
-		position:fixed;
-		bottom:0;
+		/*position:fixed;
+		bottom:0;*/ 
 	}
-	nav ul {
+	.nav ul {
     	flex-direction: column;
 		display: flex;
     	position: sticky;
@@ -169,7 +169,7 @@ nav ul {
 }
 /*End Top Menu Settings*/
 
-/* Sidebar Menu Settings */
+/* Nav Menu Settings */
 
 /* The navigation menu links */
 .nav a {
@@ -206,7 +206,7 @@ nav ul {
 	border-color: yellow;
 	background-color: black;
 }
-/* End Sidebar Menu Settings*/
+/* End Nav Menu Settings*/
 
 /* My Footer*/
 /* Stolen from https://stackoverflow.com/questions/14920401/how-to-simulate-hfill-with-html-and-css */
@@ -287,11 +287,11 @@ nav ul {
 }
 }*/
 
-h1 {
+.h1 {
 	font-family: Verdana, sans-serif;
-	margin-top: 3;
-	margin-bottom: 4;
-	margin-left: 10;
+	margin-top: 3px;
+	margin-bottom: 4px;
+	margin-left: 10px;
 	text-align: left;
 }
 
