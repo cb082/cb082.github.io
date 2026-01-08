@@ -46,6 +46,8 @@ nav ul {
 	} 
 	
 	.footer {
+		position:fixed;
+		bottom:0;
 		grid-column: col-start / span 12;
 	}
 
@@ -81,6 +83,8 @@ nav ul {
 	}*/
 	.footer {
 		grid-column: col-start / span 12;
+		position:fixed;
+		bottom:0;
 	}
 	nav ul {
     	flex-direction: column;
@@ -179,7 +183,7 @@ nav ul {
 }
 
 /* When you mouse over the navigation links, change their color */
-.nav a :hover {
+.nav a:hover {
 	color: orange;
 	border:3px;
 	border-color: yellow;
@@ -196,7 +200,7 @@ nav ul {
 }
 
 /* When you mouse over the navigation links, change their color */
-.subnav a :hover {
+.subnav a:hover {
 	color: orange;
 	border:3px;
 	border-color: yellow;
