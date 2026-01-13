@@ -174,11 +174,65 @@
   </ul>
 </div>
 
+<div class = “pagenav”>
+	<ul>
+		<li><a href = “#intro”> Introduction </a></li>
+		<li><a href = “#videos”> Videos </a></li>
+		<li><a href = “#concepts”> Concepts </a></li>
+		<li><a href = “#interactives”> Interactives </a></li>
+		<li><a href = “#externalrefs”> External References </a></li>
+	</ul>
+</div>
 
 <!-- Page content -->
 <div class="content">
 
 <h2>Introduction to Laplace Transforms</h2>
+
+<h3 id = “intro”> Introduction </h3>
+
+<p> The Laplace transform is an operator that converts differential equations into algebraic equations, which are easier to solve.
+This transformation also allows us to work with piecewise forcing functions and model a number of real-world situations that were difficult to
+work with other techniques. The challenge in solving an IVP using the Laplace transform lies in reversing the transformation.
+In this section we examine the definition and basic properties of the Laplace transform. </p>  
+
+<h3 id = “videos”> Videos </h3>
+
+<p>Here are some recommended videos for additional learning:</p>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/KqokoYr_h1A" allowfullscreen></iframe>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/fuxFrpaMLtw" allowfullscreen></iframe>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/fMdeTlV2sGg" allowfullscreen></iframe>
+
+
+<h3 id = “concepts”> Concepts </h3>
+
+<div class = "definition">
+    The Laplace transform of a function \( f(t) \), defined for \(t \geq 0,\) is
+    \[\mathcal{L}\{f(t)\}(s) = F(s) = \int_0^\infty e^{-st} f(t) \, dt.\]
+</div>
+
+<div class = "examples"> Here are some the Laplace Transform of some important functions.
+  <ul>
+    <li>\(\mathcal{L}\{1\} = \dfrac{1}{s}\)</li> <br>
+    <li>\(\mathcal{L}\{t\} = \dfrac{1}{s^2}\)</li> <br>
+    <li>\(\mathcal{L}\{e^{at}\} = \dfrac{1}{s-a}\)</li> <br>
+    <li>\(\mathcal{L}\{\sin(bt)\} = \dfrac{b}{s^2+b^2}\)</li> <br>
+    <li>\(\mathcal{L}\{\cos(bt)\} = \dfrac{s}{s^2+b^2}\)</li>
+  </ul>
+</div>
+
+
+<div class = "proposition">
+  <ul>
+    <li>Linearity: \(\mathcal{L}\{af(t) + bg(t)\} = aF(s) + bG(s)\).</li>
+    <li>Derivatives: \(\mathcal{L}\{f'(t)\} = sF(s) - f(0).\)</li>
+    <li>Higher derivatives: \(\mathcal{L}\{f''(t)\} = s^2 F(s) - s f(0) - f'(0).\)</li>
+  </ul>
+</div>
+
+<h3 id = “interactives”> Interactives </h3>
+
+<h3 id = “externalrefs”> External References </h3>
 
   <h2>Learning Goals</h2>
     <ul>
@@ -189,26 +243,10 @@
     </ul>
 
   <h2>Concept Review</h2>
-  <div class = "definition">
-    The Laplace transform of a function \( f(t) \), defined for \( t \geq 0 \), is
-    \[\mathcal{L}\{f(t)\}(s) = F(s) = \int_0^\infty e^{-st} f(t) \, dt.\]
-  </div>
+  
 
   <h3>Key Properties:</h3>
-  <ul>
-    <li>Linearity: \(\mathcal{L}\{af(t) + bg(t)\} = aF(s) + bG(s)\).</li>
-    <li>Derivatives: \(\mathcal{L}\{f'(t)\} = sF(s) - f(0).\)</li>
-    <li>Higher derivatives: \(\mathcal{L}\{f''(t)\} = s^2 F(s) - s f(0) - f'(0).\)</li>
-  </ul>
-
-  <h3>Common Transforms:</h3>
-  <ul>
-    <li>\(\mathcal{L}\{1\} = \dfrac{1}{s}\)</li>
-    <li>\(\mathcal{L}\{t\} = \dfrac{1}{s^2}\)</li>
-    <li>\(\mathcal{L}\{e^{at}\} = \dfrac{1}{s-a}\)</li>
-    <li>\(\mathcal{L}\{\sin(bt)\} = \dfrac{b}{s^2+b^2}\)</li>
-    <li>\(\mathcal{L}\{\cos(bt)\} = \dfrac{s}{s^2+b^2}\)</li>
-  </ul>
+  
 
   <h2>Practice Problems</h2>
 
@@ -277,11 +315,7 @@
   </ul>
 
   <h2>Video Resources</h2>
-  <p>Here are some recommended videos for additional learning:</p>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/KqokoYr_h1A" allowfullscreen></iframe>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/fuxFrpaMLtw" allowfullscreen></iframe>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/fMdeTlV2sGg" allowfullscreen></iframe>
-
+  
     </div>
   
 
