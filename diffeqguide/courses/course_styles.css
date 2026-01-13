@@ -119,7 +119,6 @@ h2,h3,h4,h5 {
 	}
 	.sidenav ul {
     	flex-direction: column;
-		display: flex;
     	position: sticky;
     	top: 0;
     	align-items: start;
@@ -204,11 +203,11 @@ h2,h3,h4,h5 {
 	/*Subsection level links*/
 .sidenav a {
 	padding: 6px 0px 6px 16px;
-	text-decoration: none;
+	text-decoration: bold;
 	font-size: 14px;
 	margin-right: 10px;
   	color: black;
-	background-color: gray;
+	background-color: rgb(240,240,240);
 	display: block;
 }
 
