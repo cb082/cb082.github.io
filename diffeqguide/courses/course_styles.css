@@ -33,6 +33,12 @@ h2,h3,h4,h5 {
 	padding: 0;
 }
 
+.sidenav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
 /* Mobile first */
 .container > * {
 	/*border: 1px solid green;
@@ -95,7 +101,7 @@ h2,h3,h4,h5 {
 
 	.sidenav {
 		grid-column: col-start 11 / span 2;
-		background-color:gray;
+		/*background-color:gray;*/
 		grid-row: 2 / 4;
 	}
 
