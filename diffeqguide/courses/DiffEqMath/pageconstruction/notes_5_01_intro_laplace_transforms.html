@@ -21,13 +21,14 @@
   </ul>
 </div>
 
-<div class = “pagenav”>
+<div class = “sidenav”>
 	<ul>
-		<li><a href = “#intro”> Introduction </a></li>
-		<li><a href = “#videos”> Videos </a></li>
-		<li><a href = “#concepts”> Concepts </a></li>
-		<li><a href = “#interactives”> Interactives </a></li>
-		<li><a href = “#externalrefs”> External References </a></li>
+		<li><a href = "#intro"> Introduction </a></li>
+		<li><a href = "#videos"> Videos </a></li>
+		<li><a href = "#concepts"> Concepts </a></li>
+		<li><a href = "#interactives"> Interactives </a></li>
+		<li><a href = "#externalrefs"> External References </a></li>
+    <li><a href = "#deptconnections"> Department Connections </a></li>
 	</ul>
 </div>
 
@@ -36,14 +37,14 @@
 
 <h2>Introduction to Laplace Transforms</h2>
 
-<h3 id = “intro”> Introduction </h3>
+<h3 id = "intro"> Introduction </h3>
 
 <p> The Laplace transform is an operator that converts differential equations into algebraic equations, which are easier to solve.
 This transformation also allows us to work with piecewise forcing functions and model a number of real-world situations that were difficult to
 work with other techniques. The challenge in solving an IVP using the Laplace transform lies in reversing the transformation.
 In this section we examine the definition and basic properties of the Laplace transform. </p>  
 
-<h3 id = “videos”> Videos </h3>
+<h3 id = "videos"> Videos </h3>
 
 <p>Here are some recommended videos for additional learning:</p>
   <iframe width="560" height="315" src="https://www.youtube.com/embed/KqokoYr_h1A" allowfullscreen></iframe>
@@ -51,7 +52,7 @@ In this section we examine the definition and basic properties of the Laplace tr
   <iframe width="560" height="315" src="https://www.youtube.com/embed/fMdeTlV2sGg" allowfullscreen></iframe>
 
 
-<h3 id = “concepts”> Concepts </h3>
+<h3 id = "concepts"> Concepts </h3>
 
 <div class = "definition">
     The Laplace transform of a function \( f(t) \), defined for \(t \geq 0,\) is
@@ -71,97 +72,17 @@ In this section we examine the definition and basic properties of the Laplace tr
 
 <div class = "proposition">
   <ul>
-    <li>Linearity: \(\mathcal{L}\{af(t) + bg(t)\} = aF(s) + bG(s)\).</li>
-    <li>Derivatives: \(\mathcal{L}\{f'(t)\} = sF(s) - f(0).\)</li>
-    <li>Higher derivatives: \(\mathcal{L}\{f''(t)\} = s^2 F(s) - s f(0) - f'(0).\)</li>
+    <li>Linearity: \(\mathcal{L}\{af(t) + bg(t)\} = aF(s) + bG(s)\).</li> <br>
+    <li>Derivatives: \(\mathcal{L}\{f'(t)\} = sF(s) - f(0).\)</li> <br>
+    <li>Higher derivatives: \(\mathcal{L}\{f''(t)\} = s^2 F(s) - s f(0) - f'(0).\)</li> <br>
   </ul>
 </div>
 
-<h3 id = “interactives”> Interactives </h3>
+<h3 id = "interactives"> Interactives </h3>
 
-<h3 id = “externalrefs”> External References </h3>
+<h3 id = "externalrefs"> External References </h3>
 
-  <h2>Learning Goals</h2>
-    <ul>
-      <li>Understand the definition of the Laplace transform.</li>
-      <li>Compute Laplace transforms of common functions.</li>
-      <li>Apply Laplace transforms to solve initial value problems (IVPs).</li>
-      <li>Use inverse Laplace transforms and basic properties (linearity, shifting).</li>
-    </ul>
 
-  <h2>Concept Review</h2>
   
-
-  <h3>Key Properties:</h3>
-  
-
-  <h2>Practice Problems</h2>
-
-  <h3>A. Core Skill Practice</h3>
-  <ol class="problem-set">
-    <li>
-      Compute \(\mathcal{L}\{t^2\}\).  
-      <details><summary>Hint</summary>
-        Recall: \(\mathcal{L}\{t^n\} = \tfrac{n!}{s^{n+1}}\).
-      </details>
-      <details><summary>Solution</summary>
-        \(\mathcal{L}\{t^2\} = \tfrac{2}{s^3}\).
-      </details>
-    </li>
-    <li>
-      Compute \(\mathcal{L}\{e^{2t}\cos(3t)\}\).
-      <details><summary>Hint</summary>
-        Try the shifting rule: \(\mathcal{L}\{e^{at}f(t)\} = F(s-a)\).
-      </details>
-      <details><summary>Solution</summary>
-        \(\frac{s-2}{(s-2)^2+9}\).
-      </details>
-    </li>
-    <li>
-      Find the inverse Laplace transform: \(F(s) = \tfrac{3}{s^2+9}\).
-      <details><summary>Solution</summary>
-        \(\mathcal{L}^{-1}\left(\tfrac{3}{s^2+9}\right) = \sin(3t)\).
-      </details>
-    </li>
-  </ol>
-
-  <h3>B. Solving IVPs with Laplace Transforms</h3>
-  <ol class="problem-set">
-    <li>Solve the IVP: \(y''+y=0, \; y(0)=0, \; y'(0)=1.\)</li>
-    <li>Solve the IVP: \(y'-3y=e^{2t}, \; y(0)=1.\)</li>
-    <li>Solve the IVP: \(y''+4y'+4y=0, \; y(0)=2, \; y'(0)=0.\)</li>
-  </ol>
-
-  <h3>C. Applications</h3>
-  <ol class="problem-set">
-    <li>
-      Mechanical Oscillator: \(y''+4y=0, \; y(0)=0, \; y'(0)=2.\)  
-      Use the Laplace transform to find \(y(t)\).
-    </li>
-    <li>
-      RC Circuit: \(V'(t)+V(t)=E(t)\) with \(E(t)=5\), \(V(0)=0\).  
-      Solve for \(V(t)\) given \(R=1\Omega, C=1F\).
-    </li>
-  </ol>
-
-  <h3>D. Challenge Problem</h3>
-  <p>
-    Use the Laplace transform to solve the IVP:
-    \[
-    y''+y'-2y=\sin(t), \quad y(0)=0, \; y'(0)=1.
-    \]
-    Verify your solution by substitution.
-  </p>
-
-  <h2>Instructor Notes</h2>
-  <ul>
-    <li>Core skills reinforce the mechanics of computing Laplace transforms and inverses.</li>
-    <li>IVP problems show the systematic solving process: transform, algebraic manipulation, inverse transform.</li>
-    <li>Application problems demonstrate connections to physics and engineering.</li>
-    <li>The challenge problem highlights how Laplace transforms simplify otherwise tedious ODEs.</li>
-  </ul>
-
-  <h2>Video Resources</h2>
-  
-    </div>
+</div>
   
