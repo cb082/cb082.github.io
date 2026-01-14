@@ -2,7 +2,7 @@
 
   @font-face {
     font-family: "Computer Modern";
-    src: url('http://spratt.github.io/Computer-Modern/cmunss.otf');
+    src: url('http://spratt.github.io/Computer-Modern/cmunss.woff') format('woff'), url('http://spratt.github.io/Computer-Modern/cmunss.otf');
   }
   @font-face {
     font-family: "Computer Modern";
@@ -221,7 +221,7 @@ h2,h3,h4,h5 {
 	font-size: 14px;
 	margin-left: 10px;
   	color: #ffffff;
-	background-color: rgb(78, 78, 79);
+	/*background-color: rgb(78, 78, 79);*/
 	display: block;
 }
 
@@ -250,7 +250,7 @@ h2,h3,h4,h5 {
 	color: orange;
 	border:3px;
 	border-color: yellow;
-	background-color: rgb(100,100,100);
+	background-color: rgb(150,150,150);
 }
 /* End Nav Link Settings*/
 
