@@ -154,6 +154,9 @@ h2,h3,h4,h5 {
 	}
 }
 
+.sidenav{
+	background-color: rgb(78, 78, 79);
+}
 
 /*End of grid layout*/
 
@@ -231,6 +234,7 @@ h2,h3,h4,h5 {
 
 	/*Subsection level links*/
 .sidenav a {
+	font-family: Verdana, sans-serif;
 	padding: 6px 0px 6px 16px;
 	text-decoration: bold;
 	font-size: 14px;
